@@ -23,7 +23,7 @@
 .expand{
 
     width :80%;
-    margin: 20px auto;
+    margin: 2vh auto;
     cursor: pointer;
     display: flex;
     flex-direction: column;
@@ -38,14 +38,14 @@
     background-color:#cae5e6;
     height: 15vh;
     margin-bottom: 0px; 
-    font-size: 1vw;
+    font-size: 2vmin;
 }
 .secondary{
     color: white;
     background-color:#0b939a;
     height: 8vh;
     margin-top: 0px;
-    font-size: 0.7vw;
+    font-size: 1.7vmin;
 
 }
 </style>

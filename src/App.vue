@@ -1,6 +1,6 @@
 <template>
   <div>
-    <!-- <Curriculums /> -->
+    <Curriculums />
     <Domains/>
   </div>
 </template>
