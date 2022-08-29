@@ -6,10 +6,11 @@
             <h4 class="q">{{q.question}}</h4>
         </div>
         <div class="inp">
-            <input type="radio" :name="'q'+qid" value="yes" v-model="answer">
-            <input type="radio" :name="'q'+qid" value="no" v-model="answer">
-            <input type="radio" :name="'q'+qid" value="not-shown" v-model="answer">
-            <input type="radio" :name="'q'+qid" value="not-clear" v-model="answer">
+            <Radio type="radio" :name="'q'+qid" value="yes" v-model="answer" />
+            <Radio type="radio" :name="'q'+qid" value="no" v-model="answer" />
+            <Radio type="radio" :name="'q'+qid" value="not-shown" v-model="answer" />
+            <Radio type="radio" :name="'q'+qid" value="not-clear" v-model="answer" />
+            
         </div>
 
     </div>
@@ -18,26 +19,26 @@
 
 <script>
     import { ref ,watch} from 'vue';
+    import Radio from './Radio.vue';
 
     export default {
-        name:'Question',
-        emits:['qchange'],
-        props:{
-            qid:String,
-            q:Object,
-        },
-        setup(props,context){
-            const answer = ref('');
-            
-            watch(answer,(newValue)=>{
-                context.emit('qchange',{answer,id:props.q.id})
-            },{immediate:true})
-
-            return{
-                answer
-            }
-        }
-    }
+    name: "Question",
+    emits: ["qchange"],
+    props: {
+        qid: String,
+        q: Object,
+    },
+    setup(props, context) {
+        const answer = ref("");
+        watch(answer, (newValue) => {
+            context.emit("qchange", { answer, id: props.q.id });
+        }, { immediate: true });
+        return {
+            answer
+        };
+    },
+    components: { Radio }
+}
 </script>
 
 <style scoped>
@@ -72,6 +73,6 @@
     margin:4vh 3vw;
 }
 .txt > * {
-    margin-left : 4vw;
+    margin : auto 0 auto 4vw;
 }
 </style>

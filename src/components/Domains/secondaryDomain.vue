@@ -1,14 +1,14 @@
 <template>
     <div>
         <div @click="expand" :class="toggle? 'sec-domain toggled':'sec-domain'">
-            <h3>المجال الفرعي: {{sdKey}}</h3>
+            <h3>المجال الفرعي: <span>{{sdKey}}</span></h3>
             <!-- <h3>عدد المجالات الفرعية: 13</h3> -->
-            <h3>مهارات متاحة: {{qcount}}</h3>
-            <h3>الفجوة العمرية: 5 شهور</h3>
-            <h3>متبقي: {{remaining}}  </h3>
-            <h3>نقاط قوة: {{countYes}}</h3>
-            <h3>نقاط ضعف: {{countNo}}</h3>
-            <h3>اخري: {{countOther}}</h3>
+            <h3>مهارات متاحة: <span>{{qcount}}</span></h3>
+            <h3>الفجوة العمرية: <span>5 شهور</span></h3>
+            <h3>متبقي: <span>{{remaining}}</span>  </h3>
+            <h3>نقاط قوة: <span>{{countYes}}</span></h3>
+            <h3>نقاط ضعف: <span>{{countNo}}</span></h3>
+            <h3>اخري: <span>{{countOther}}</span></h3>
         </div>
 
         <div  v-show="toggle">
@@ -28,7 +28,7 @@
 
 
     export default {
-    name: "Domain",
+    name: "SecondaryDomain",
     mixins: [toggler],
     components: { Form },
     setup(p,context){
@@ -99,6 +99,8 @@
     background-color: #14d6e0;
     transform: scaleY(1.1);
 }
-
+span{
+    color: #1b847a;
+}
 
 </style>

@@ -22,7 +22,7 @@
 <style scoped>
 .expand{
 
-    width :80%;
+    width :85%;
     margin: 2vh auto;
     cursor: pointer;
     display: flex;
@@ -32,7 +32,7 @@
 
 }
 .expand:hover{
-    transform:scaleY(1.1);
+    transform:scaleY(1.05);
 }
 .primary{
     background-color:#cae5e6;

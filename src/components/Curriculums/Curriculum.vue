@@ -2,7 +2,7 @@
     <div>
         <Expandable @click="expand" type="primary" :title="content.title"/>
         <template v-if="toggle">
-            <Expandable v-for="child in content.content" :key="child"  type="secondary" :title="child"/>
+            <Expandable @click="link" v-for="child in content.content" :key="child"  type="secondary" :title="child"/>
         </template>
     </div>
 </template>
@@ -15,6 +15,11 @@ import Expandable from './Expandable.vue';
     props: {
         title: String,
         content:Object,
+    },
+    methods:{
+        link(){
+            this.$router.push('domain');
+        }
     },
     components: { Expandable },
     mixins:[toggler]
