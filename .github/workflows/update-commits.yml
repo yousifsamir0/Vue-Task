@@ -1,0 +1,25 @@
+name: Update Commits
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  update-commits:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run Update Commits Script
+        run: npm run update-commits
