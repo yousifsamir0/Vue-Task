@@ -3,7 +3,7 @@ name: Update Commits
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   update-commits:
